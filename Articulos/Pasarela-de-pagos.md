@@ -133,11 +133,11 @@ Donde:
 
 Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captura) puedes desplegar la ventana de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
-![Ejemplo de ventana Formulario](Articulos/Portal02.jpg)
+![Ejemplo de ventana Formulario](Portal02.jpg)
 
 El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **USAR ESTA TARJETA** para que se ejecute la intención de captura.
 
-![Ejemplo datos a ingresar](Articulos/Portal03.jpg)
+![Ejemplo datos a ingresar](Portal03.jpg)
 
 La respuesta será enviada a la **return_url** indicada en la peticióna a la [API de intención de Captura](#2. Crear una Intención de Captura).
 
@@ -377,7 +377,7 @@ Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a con
 
 Es necesario que el cliente apruebe el pago antes de finalizar cada transacción asociada a una intención. Para ello debes desplegar al cliente la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3. Formulario de Captura de tarjeta).
 
-![Ejemplo Approval](Articulos/Portal04.jpg)
+![Ejemplo Approval](Portal04.jpg)
 
 * Cliente hace clic en Aprobar Pago
 
