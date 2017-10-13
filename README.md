@@ -10,4 +10,4 @@ Te ofrecemos las siguientes soluciones:
 
 - [Pasarela de pagos](Articulos/Pasarela-de-pagos.md)
 - [Motor de fraude](Articulos/Motor-de-fraude.md)
-- [Pago Recurrente](Articulos/Pago Recurrente.md)
+- [Pago Recurrente](Articulos/Pago-recurrente.md)
