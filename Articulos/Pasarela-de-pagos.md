@@ -2,8 +2,8 @@
 
 Esta solución te permite recibir pago de tus clientes en tu sitio de e-commerce. Para ello, te puedes integrar de 2 formas distintas:
 
-- [[API Tokenización y Pago|API Tokenización y Pago]]
-- [SDK/Plugins](SDK/Plugins)
+- **API Tokenización y Pago**
+- **SDK/Plugins**
 
 #### API Tokenización y Pago
 
