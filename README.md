@@ -9,5 +9,5 @@ Además, utilizando Peinau nunca verás la información sensible de la tarjeta y
 Te ofrecemos las siguientes soluciones:
 
 - [Pasarela de pagos](Articulos/Pasarela-de-pagos.md)
-- [Motor de fraude](#Motor de fraude)
-- [Pago Recurrente](#Pago Recurrente (Suscripción))
+- [Motor de fraude](Articulos/Motor de fraude.md)
+- [Pago Recurrente](Articulos/Pago Recurrente.md)
