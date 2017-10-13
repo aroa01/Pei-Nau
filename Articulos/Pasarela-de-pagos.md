@@ -20,7 +20,7 @@ La integración mediante API's te da un mayor control sobre el checkout en tu si
 
 Al completar el registro de la aplicación en el portal de desarrollo (Alta del Comercio), obtendrás dos llaves con las cuales te podrás autenticar en el sistema, a estas les llamamos **client_id** (identificador) y **client_secret** (Clave Secreta).
 
-![Portal00](/home/andres/Documentos/Imagenes Peinau/Portal00.jpg)
+![Ejemplo de client_id y client_secret](Articulos/Portal00.jpg)
 
 Con estas credenciales podrás obtener el **token de acceso** llamando a la **API de Autenticación** de la siguiente forma:
 
@@ -133,11 +133,11 @@ Donde:
 
 Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captura) puedes desplegar la ventana de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
-![Portal02](/home/andres/Documentos/Imagenes Peinau/Portal02.jpg)
+![Ejemplo de ventana Formulario](Articulos/Portal02.jpg)
 
 El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **USAR ESTA TARJETA** para que se ejecute la intención de captura.
 
-![Portal03](/home/andres/Documentos/Imagenes Peinau/Portal03.jpg)
+![Ejemplo datos a ingresar](Articulos/Portal03.jpg)
 
 La respuesta será enviada a la **return_url** indicada en la peticióna a la [API de intención de Captura](#2. Crear una Intención de Captura).
 
@@ -211,7 +211,7 @@ El **id** generado corresponde al **Token de la tarjeta**.
 
 ##### 4. Intención de Pago
 
-Para completar el pago con **Capture Card** debes ingresar el **Id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago** y hacer el llamado de la siguiente forma:
+Para completar el pago con el **token de la tarjeta** debes ingresar el **Id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago** y hacer el llamado de la siguiente forma:
 
 ```
 curl -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments' \
@@ -377,7 +377,7 @@ Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a con
 
 Es necesario que el cliente apruebe el pago antes de finalizar cada transacción asociada a una intención. Para ello debes desplegar al cliente la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3. Formulario de Captura de tarjeta).
 
-![Portal04](/home/andres/Documentos/Imagenes Peinau/Portal04.jpg)
+![Ejemplo Approval](Articulos/Portal04.jpg)
 
 * Cliente hace clic en Aprobar Pago
 
@@ -552,8 +552,6 @@ Es necesario que el cliente apruebe el pago antes de finalizar cada transacción
   }
 }
 ```
-
-
 
 ###### 5.2 Silent Charge
 
