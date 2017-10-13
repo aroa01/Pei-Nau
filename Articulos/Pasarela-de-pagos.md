@@ -1,11 +1,11 @@
- ### Pasarela de pagos
+# Pasarela de pagos
 
 Esta solución te permite recibir pago de tus clientes en tu sitio de e-commerce. Para ello, te puedes integrar de 2 formas distintas:
 
-- **API Tokenización y Pago**
-- **SDK/Plugins**
+## - API Tokenización y Pago
+## - SDK/Plugins
 
-#### API Tokenización y Pago
+### API Tokenización y Pago
 
 La integración mediante API's te da un mayor control sobre el checkout en tu sitio. Esto porque el proceso se divide en dos etapas que pueden ocurrir en distintos momentos: Obtener un Token de la tarjeta de crédito y posteriormente realizar el cargo.
 
@@ -16,7 +16,7 @@ La integración mediante API's te da un mayor control sobre el checkout en tu si
 3. [Mostrar formulario de Captura](#3. Formulario de Captura de tarjeta)
 4. [Realizar el cobro a la tarjeta](#4. Realizar un Cobro)
 
-##### 1. Obtener un Token de Acceso
+#### 1. Obtener un Token de Acceso
 
 Al completar el registro de la aplicación en el portal de desarrollo (Alta del Comercio), obtendrás dos llaves con las cuales te podrás autenticar en el sistema, a estas les llamamos **client_id** (identificador) y **client_secret** (Clave Secreta).
 
@@ -48,7 +48,7 @@ Como respuesta obtendrás el **access_token**:
 
 Con el **access_token** generado, ya puedes comenzar a usar las API's para los pasos 2, 3 y 4 
 
-##### 2. Crear una Intención de Captura
+#### 2. Crear una Intención de Captura
 
 Luego de haber obtenido el token de acceso y con la información mínima del cliente, se debe crear una **intención de captura**.
 
@@ -129,7 +129,7 @@ Donde:
 + Link 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura. [Puedes hacer clic aquí para ver un ejemplo de self](https://quickpay-connect-capture-card.azurewebsites.net/captures/f445ffde-c746-e0ce-1fc6-751f8c633800)
 + Link 2 (**rel: capture_url**): desde esta URL debes acceder al formulario de captura de la tarjeta.
 
-##### 3. Formulario de Captura de tarjeta
+#### 3. Formulario de Captura de tarjeta
 
 Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captura) puedes desplegar la ventana de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
@@ -209,7 +209,7 @@ El **id** generado corresponde al **Token de la tarjeta**.
 
 > **id de ejemplo**"id": "fe5228dc-91ab-fa28-97ec-034bed089743"
 
-##### 4. Intención de Pago
+#### 4. Intención de Pago
 
 Para completar el pago con el **token de la tarjeta** debes ingresar el **Id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago** y hacer el llamado de la siguiente forma:
 
@@ -369,11 +369,11 @@ Obtendrás los Links:
 
 Que te permitirán:
 
-##### 5. Realizar un Cobro
+#### 5. Realizar un Cobro
 
 Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a continuación podrás ver el detalle de cada una: CAMBIAR CAPTURECARD POR UNA VEZ OBTENIDO EL TOKEN
 
-###### 5.1 Approval
+##### 5.1 Approval
 
 Es necesario que el cliente apruebe el pago antes de finalizar cada transacción asociada a una intención. Para ello debes desplegar al cliente la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3. Formulario de Captura de tarjeta).
 
@@ -553,17 +553,17 @@ Es necesario que el cliente apruebe el pago antes de finalizar cada transacción
 }
 ```
 
-###### 5.2 Silent Charge
+##### 5.2 Silent Charge
 
 Con esta opción, el comercio no necesita aprobación del cliente y puede gatillar el cobro a partir de la URL [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent) generada en el [paso 3](#3. Formulario de Captura de tarjeta).
 
-#### API Checkout
+### API Checkout
 
 Puedes ejecutar un pago (Approval o Silent Charge) sin pasar por la captura de tarjeta.
 
 > PROXIMAMENTE
 
-#### SDK/Plugins
+### SDK/Plugins
 
 Tendrás a disposición una serie se SDK's para que puedas personalizar Peinau de acuerdo a tus necesidades.
 
