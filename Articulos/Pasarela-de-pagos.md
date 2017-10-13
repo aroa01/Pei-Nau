@@ -13,8 +13,9 @@ La integración mediante API's te da un mayor control sobre el checkout en tu si
 
 1. **_Obtener un Token de Acceso_**
 2. **_Crear una Intención de Captura_**
-3. **_Mostrar formulario de Captura_**
-4. **_Realizar el cobro a la tarjeta_**
+3. **_Mostrar formulario de Captura de tarjeta_**
+4. **_Intención de Pago_**
+5. **_Realizar el cobro a la tarjeta_**
 
 #### 1. Obtener un Token de Acceso
 
@@ -129,7 +130,7 @@ Donde:
 + Link 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura. [Puedes hacer clic aquí para ver un ejemplo de self](https://quickpay-connect-capture-card.azurewebsites.net/captures/f445ffde-c746-e0ce-1fc6-751f8c633800)
 + Link 2 (**rel: capture_url**): desde esta URL debes acceder al formulario de captura de la tarjeta.
 
-#### 3. Formulario de Captura de tarjeta
+#### 3. Mostrar Formulario de Captura de tarjeta
 
 Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captura) puedes desplegar la ventana de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
@@ -369,7 +370,7 @@ Obtendrás los Links:
 
 Que te permitirán:
 
-#### 5. Realizar un Cobro
+#### 5. Realizar el Cobro a la tarjeta
 
 Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a continuación podrás ver el detalle de cada una: CAMBIAR CAPTURECARD POR UNA VEZ OBTENIDO EL TOKEN
 
