@@ -559,7 +559,7 @@ Es necesario que el cliente apruebe el pago antes de finalizar cada transacción
 
 Con esta opción, el comercio no necesita aprobación del cliente y puede gatillar el cobro a partir de la URL [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent) generada en el [paso 3](#3. Formulario de Captura de tarjeta).
 
-#### PI Checkout
+#### API Checkout
 
 Puedes ejecutar un pago (Approval o Silent Charge) sin pasar por la captura de tarjeta.
 
