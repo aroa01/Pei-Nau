@@ -20,7 +20,7 @@ La integración mediante API's te da un mayor control sobre el checkout en tu si
 
 Al completar el registro de la aplicación en el portal de desarrollo (Alta del Comercio), obtendrás dos llaves con las cuales te podrás autenticar en el sistema, a estas les llamamos **client_id** (identificador) y **client_secret** (Clave Secreta).
 
-![Ejemplo de client_id y client_secret](Articulos/Portal00.jpg)
+![Ejemplo de client_id y client_secret](Portal00.jpg)
 
 Con estas credenciales podrás obtener el **token de acceso** llamando a la **API de Autenticación** de la siguiente forma:
 
