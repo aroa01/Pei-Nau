@@ -1,20 +1,20 @@
 # Pasarela de pagos
 
-Esta solución te permite recibir pago de tus clientes en tu sitio de e-commerce. Para ello, te puedes integrar de 2 formas distintas:
+Esta solución te permite recibir pagos de tus clientes en tu sitio de e-commerce. Para ello, te puedes integrar de 2 formas distintas:
 
-## - API Tokenización y Pago
-## - SDK/Plugins
+- **API Tokenización y Pago**
+- **SDK/Plugins**
 
-### API Tokenización y Pago
+## API Tokenización y Pago
 
 La integración mediante API's te da un mayor control sobre el checkout en tu sitio. Esto porque el proceso se divide en dos etapas que pueden ocurrir en distintos momentos: Obtener un Token de la tarjeta de crédito y posteriormente realizar el cargo.
 
  Los pasos para realizar la integración son:
 
-1. [Obtener un Token de Acceso](#1. Obtener un Token de Acceso)
-2. [Crear una Intención de Captura](#2. Crear una Intención de Captura)
-3. [Mostrar formulario de Captura](#3. Formulario de Captura de tarjeta)
-4. [Realizar el cobro a la tarjeta](#4. Realizar un Cobro)
+**_1. Obtener un Token de Acceso_**
+**_2. Crear una Intención de Captura_**
+**_3. Mostrar formulario de Captura_**
+**_4. Realizar el cobro a la tarjeta_**
 
 #### 1. Obtener un Token de Acceso
 
@@ -557,13 +557,13 @@ Es necesario que el cliente apruebe el pago antes de finalizar cada transacción
 
 Con esta opción, el comercio no necesita aprobación del cliente y puede gatillar el cobro a partir de la URL [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent) generada en el [paso 3](#3. Formulario de Captura de tarjeta).
 
-### API Checkout
+## API Checkout
 
 Puedes ejecutar un pago (Approval o Silent Charge) sin pasar por la captura de tarjeta.
 
 > PROXIMAMENTE
 
-### SDK/Plugins
+## SDK/Plugins
 
 Tendrás a disposición una serie se SDK's para que puedas personalizar Peinau de acuerdo a tus necesidades.
 
