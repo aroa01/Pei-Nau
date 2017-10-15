@@ -1,0 +1,20 @@
+# Anulaciones
+
+Puedes anular cualquier tarnsacción a través de distintos canales:
+
+- <u>APIs</u>
+
+Utilizando el **access_token** obtenido en la llamada a la **API de Autenticación** y el **id (Token de la tarjeta)** generado en la llamada a la **API de intención de captura**, debes ejecutar una petición a la *API de Anulacion /reverse de la siguiente forma:
+
+```
+ curl -v -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/{Token_de_tarjeta}/reverse' \
+ -H "Content-Type: application/json" \
+ -H "Authorization: Bearer access_token"
+```
+- <u>Portal de Comercio</u>
+
+  > PROXIMAMENTE
+
+- <u>Portal de Transbank</u>
+
+  Puedes obtener mayor información en <https://www.transbank.cl/web/landing/2017/anulaciones>
