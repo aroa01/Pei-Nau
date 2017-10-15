@@ -132,15 +132,15 @@ Donde:
 
 #### 3. Mostrar Formulario de Captura de tarjeta
 
-Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captura) puedes desplegar la ventana de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
+Con la **capture_url** obtenida en el [paso 2](2. Crear una intención de Captura) puedes desplegar el formulario de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
 ![Ejemplo de ventana Formulario](Portal02.jpg)
 
-El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **USAR ESTA TARJETA** para que se ejecute la intención de captura.
+El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **Usar esta tarjeta** para obtener el Token de la tarjeta de crédito.
 
 ![Ejemplo datos a ingresar](Portal03.jpg)
 
-La respuesta será enviada a la **return_url** indicada en la peticióna a la [API de intención de Captura](#2. Crear una Intención de Captura).
+La respuesta será enviada a la **return_url** indicada en la petición a la [API de intención de Captura](#2. Crear una Intención de Captura).
 
 **Ejemplo de respuesta enviada a la return_url:**
 
@@ -212,7 +212,7 @@ El **id** generado corresponde al **Token de la tarjeta**.
 
 #### 4. Intención de Pago
 
-Para completar el pago con el **token de la tarjeta** debes ingresar el **Id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago** y hacer el llamado de la siguiente forma:
+Para completar el pago con el **token de la tarjeta** debes ingresar el **Id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments** y hacer el llamado de la siguiente forma:
 
 ```
 curl -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments' \
@@ -364,23 +364,28 @@ Como respuesta obtendrás la siguiente información:
 Obtendrás los Links:
 
 - [self](https://quickpay-connect-checkout.azurewebsites.net/payments/0fdcd938-62c7-aab2-5048-c2f172d495ac): desde esta URL puedes consultar la información de la captura.
-- [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay)
-- [reverse_method](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/reverse)
-- [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent)
+- [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay): desde esta URL el cliente debe autorizar el pago.
+- [reverse_method](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/reverse): llamando a esta URL puedes anular la transacción.
+- [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent): con esta URL puedes ejecutar el cobro a la tarjeta de cŕedito del cliente sin pasar por el paso de aprobación.
 
 Que te permitirán:
 
 #### 5. Realizar el Cobro a la tarjeta
 
-Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a continuación podrás ver el detalle de cada una: CAMBIAR CAPTURECARD POR UNA VEZ OBTENIDO EL TOKEN
+Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a continuación podrás ver el detalle de cada una: 
 
 ##### 5.1 Approval
 
-Es necesario que el cliente apruebe el pago antes de finalizar cada transacción asociada a una intención. Para ello debes desplegar al cliente la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3. Formulario de Captura de tarjeta).
+Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cobro a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3. Formulario de Captura de tarjeta).
 
 ![Ejemplo Approval](Portal04.jpg)
 
-* Cliente hace clic en Aprobar Pago
+Esta ventana permite dos opciones al cliente:
+
+* Aprobar Pago
+* Cancelar
+
+###### 5.1.1 Aprobar Pago
 
   Si recibes una respuesta con **"state": "paid"** en la URL indicada como **return_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha aprobado del pago.
 
@@ -478,9 +483,9 @@ Es necesario que el cliente apruebe el pago antes de finalizar cada transacción
   }
   ```
 
-* Cliente hace clic en Cancelar
+###### 5.1.2 Cancelar
 
-  Si recibes una respuesta con **"state": "canceled"** en la URL indicada como **cancel_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha cancelado la aprobación del pago.
+  Si recibes una respuesta con **"state": "canceled"** en la URL indicada como **cancel_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha cancelado el pago.
 
 ```
 {
