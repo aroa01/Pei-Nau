@@ -1,13 +1,15 @@
 # Pasarela de pagos
 
-Esta solución te permite recibir pagos de tus clientes en tu sitio de e-commerce. Para ello, te puedes integrar de 2 formas distintas:
+Esta solución permite recibir pagos de tus clientes en tu sitio de e-commerce. 
+
+Te puedes integrar de las siguientes formas:
 
 - **API Tokenización y Pago**
 - **SDK/Plugins**
 
 ## API Tokenización y Pago
 
-La integración mediante API's te da un mayor control sobre el checkout en tu sitio. Esto porque el proceso se divide en dos etapas que pueden ocurrir en distintos momentos: Obtener un Token de la tarjeta de crédito y posteriormente realizar el cargo.
+La integración mediante nuestra API te da un mayor control sobre el checkout en tu sitio, ya que el proceso se divide en dos etapas: Obtener un token de la tarjeta de crédito y realizar el cargo, y estas pueden ocurrir en momentos distintos.
 
  Los pasos para realizar la integración son:
 
