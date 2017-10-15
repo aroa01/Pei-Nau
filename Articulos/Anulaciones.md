@@ -1,6 +1,6 @@
 # Anulaciones
 
-Puedes anular cualquier tarnsacción a través de distintos canales:
+Puedes anular tus transacciones a través de distintos canales:
 
 - **API's**
 
