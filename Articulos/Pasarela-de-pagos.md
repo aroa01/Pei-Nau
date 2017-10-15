@@ -132,7 +132,7 @@ Donde:
 
 #### 3. Mostrar Formulario de Captura de tarjeta
 
-Con la **capture_url** obtenida en el [paso 2](2. Crear una intención de Captura) puedes desplegar el formulario de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
+Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captura) puedes desplegar el formulario de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
 ![Ejemplo de ventana Formulario](Portal02.jpg)
 
