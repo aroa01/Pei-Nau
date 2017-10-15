@@ -53,9 +53,9 @@ Con el **access_token** generado, ya puedes comenzar a usar las API's para los p
 
 #### 2. Crear una Intención de Captura
 
-Luego de haber obtenido el token de acceso y con la información mínima del cliente, se debe crear una **intención de captura**.
+Luego de haber obtenido el **access_token** y con la información mínima del cliente, se debe crear una **intención de captura**.
 
-Utilizando el **access_token** obtenido, debes ejecutar una llamanda a la **API de captura /captures** de la siguiente forma:
+Utilizando dicho **access_token**, debes ejecutar una llamanda a la **API de captura /captures** de la siguiente forma:
 
 ```
 curl -X POST 'https://quickpay-connect-capture-card.azurewebsites.net/captures' \
@@ -127,10 +127,10 @@ Como respuesta obtendrás la siguiente información:
 }
 ```
 
-Donde:
+Detalle de las URL's generadas:
 
-+ Link 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura. [Puedes hacer clic aquí para ver un ejemplo de self](https://quickpay-connect-capture-card.azurewebsites.net/captures/f445ffde-c746-e0ce-1fc6-751f8c633800)
-+ Link 2 (**rel: capture_url**): desde esta URL debes acceder al formulario de captura de la tarjeta.
++ URL 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura. [Puedes hacer clic aquí para ver un ejemplo de self](https://quickpay-connect-capture-card.azurewebsites.net/captures/f445ffde-c746-e0ce-1fc6-751f8c633800)
++ URL 2 (**rel: capture_url**): desde esta URL debes acceder al formulario de captura de la tarjeta.
 
 #### 3. Mostrar Formulario de Captura de tarjeta
 
@@ -138,7 +138,7 @@ Con la **capture_url** obtenida en el [paso 2](#2. Crear una intención de Captu
 
 ![Ejemplo de ventana Formulario](Portal02.jpg)
 
-El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **Usar esta tarjeta** para obtener el Token de la tarjeta de crédito.
+El cliente debe ingresar los datos solicitados en el formulario y hacer clic en **Usar esta tarjeta** para obtener el token de la tarjeta de crédito.
 
 ![Ejemplo datos a ingresar](Portal03.jpg)
 
@@ -214,12 +214,12 @@ El **id** generado corresponde al **Token de la tarjeta**.
 
 #### 4. Intención de Pago
 
-Para completar el pago con el **token de la tarjeta** debes ingresar el **Id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments** y hacer el llamado de la siguiente forma:
+Para completar el pago con el **token de la tarjeta** debes ingresar el **id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments**, el **access_token** generado en el paso 1 y hacer el llamado de la siguiente forma:
 
 ```
 curl -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments' \
  -H "Content-Type: application/json" \
- -H "Authorization: Bearer Access_Token" \
+ -H "Authorization: Bearer access_token" \
  -d '{ 
    "intent": "sale", 
    "payer": { 
