@@ -4,11 +4,11 @@ La integración mediante nuestra API te da un mayor control sobre el checkout en
 
  Los pasos para realizar la integración son:
 
-##### [1. Obtener un Token de Acceso](#1-obtener-un-token-de-acceso)
-##### [2. Crear una Intención de Captura](#2-crear-una-intención-de-captura)
-##### [3. Mostrar formulario de Captura de tarjeta](#3-mostrar-formulario-de-captura-de-tarjeta)
-##### [4. Intención de Pago](#4-intención-de-pago)
-##### [5. Realizar el cobro a la tarjeta](#5-realizar-el-cobro-a-la-tarjeta)
+- [1. Obtener un Token de Acceso](#1-obtener-un-token-de-acceso)
+- [2. Crear una Intención de Captura](#2-crear-una-intención-de-captura)
+- [3. Mostrar formulario de Captura de tarjeta](#3-mostrar-formulario-de-captura-de-tarjeta)
+- [4. Intención de Pago](#4-intención-de-pago)
+- [5. Realizar el cobro a la tarjeta](#5-cómo-realizar-el-cobro-a-la-tarjeta)
 
 #### 1. Obtener un Token de Acceso
 
