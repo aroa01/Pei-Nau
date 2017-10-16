@@ -552,7 +552,7 @@ Esta ventana permite dos opciones al cliente:
 
 ##### 5.2 Silent Charge
 
-Con esta opción, no es requerida la aprobación del cliente para finalizar el cargo a la tarjeta de crédito.
+Con esta opción, no es requerida la aprobación del cliente para ejecutar el cargo a la tarjeta de crédito.
 
 Necesitas el **access_token** obtenido en la **Autenticación** y el **id (Token de la tarjeta)** generado en la **Intención de captura**, para ejecutar una llamada a la **API de Silent Charge /silent** de la siguiente forma:
 
