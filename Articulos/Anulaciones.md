@@ -2,7 +2,7 @@
 
 Puedes anular tus transacciones a través de distintos canales:
 
-- **API's**
+- **API de Anulación**
 
 Utilizando el **access_token** obtenido en la **Autenticación** y el **id (Token de la tarjeta)** generado en la **Intención de captura**, debes ejecutar una petición a la **API de Anulación /reverse** de la siguiente forma:
 
