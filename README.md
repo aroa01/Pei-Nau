@@ -10,8 +10,11 @@ Te ofrecemos las siguientes soluciones:
 
 - [Pasarela de pagos](Articulos/Pasarela-de-pagos.md)
   - [API Tokenización y Pago](Articulos/Api-tokenizacion-pago.md)
-  - [Anulaciones](Articulos/Anulaciones.md)
   - [API Checkout](Articulos/Api-checkout.md)
   - [SDK/Plugins](Articulos/Sdk-plugins.md)
+  - [Anulaciones](Articulos/Anulaciones.md)
+
 - [Motor de fraude](Articulos/Motor-de-fraude.md)
 - [Pago Recurrente](Articulos/Pago-recurrente.md)
+
+
