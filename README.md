@@ -11,7 +11,7 @@ Te ofrecemos las siguientes soluciones:
 - [Pasarela de pagos](Articulos/Pasarela-de-pagos.md)
   - [API]
   - [Anulaciones](Articulos/Anulaciones.md)
-  - [API Checkout](Api-checkout.md)
+  - [API Checkout](Articulos/Api-checkout.md)
   - [SDK/Plugins](Articulos/Sdk-plugins.md)
 - [Motor de fraude](Articulos/Motor-de-fraude.md)
 - [Pago Recurrente](Articulos/Pago-recurrente.md)
