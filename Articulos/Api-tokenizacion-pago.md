@@ -4,11 +4,11 @@ La integración mediante nuestra API te da un mayor control sobre el checkout en
 
  Los pasos para realizar la integración son:
 
-1. **_Obtener un Token de Acceso_**
-2. **_Crear una Intención de Captura_**
-3. **_Mostrar formulario de Captura de tarjeta_**
-4. **_Intención de Pago_**
-5. **_Realizar el cobro a la tarjeta_**
+1. [Obtener un Token de Acceso](#1-obtener-un-token-de-acceso)
+2. [Crear una Intención de Captura](#2-crear-una-intención-de-captura)
+3. [Mostrar formulario de Captura de tarjeta](#3-mostrar-formulario-de-captura-de-tarjeta)
+4. [Intención de Pago](#4-intención-de-pago)
+5. [Realizar el cobro a la tarjeta](#5-realizar-el-cobro-a-la-tarjeta)
 
 #### 1. Obtener un Token de Acceso
 
@@ -120,7 +120,7 @@ Como respuesta obtendrás la siguiente información:
 
 Detalle de las URL's generadas:
 
-+ URL 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura. [Puedes hacer clic aquí para ver un ejemplo de self](https://quickpay-connect-capture-card.azurewebsites.net/captures/f445ffde-c746-e0ce-1fc6-751f8c633800)
++ URL 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura.
 + URL 2 (**rel: capture_url**): desde esta URL debes acceder al formulario de captura de la tarjeta.
 
 #### 3. Mostrar Formulario de Captura de tarjeta
@@ -205,7 +205,7 @@ El **id** generado corresponde al **Token de la tarjeta**.
 
 #### 4. Intención de Pago
 
-Para completar el pago con el **token de la tarjeta** debes ingresar el **id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments**, el **access_token** generado en el [paso 1](1-obtener-un-token-de-acceso) y hacer el llamado de la siguiente forma:
+Para completar el pago con el **token de la tarjeta** debes ingresar el **id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments**, el **access_token** generado en el [paso 1](#1-obtener-un-token-de-acceso) y hacer el llamado de la siguiente forma:
 
 ```
 curl -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments' \
