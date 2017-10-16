@@ -7,4 +7,4 @@ Te puedes integrar de las siguientes formas:
 - **API Tokenización y Pago**
 - **SDK/Plugins**
 
-[Regresar al menú inicial](Readme.md)
+[Regresar al menú inicial](README.md)
