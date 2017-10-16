@@ -8,4 +8,6 @@ Te puedes integrar de las siguientes formas:
   - [API Checkout](Api-checkout.md)
   - [SDK/Plugins](Sdk-plugins.md)
 
-Además tienes la posibilidad de ejecutar **[Anulaciones](Articulos/Anulaciones.md)** de todas tus transacciones.
+Además tienes la posibilidad de anular todas tus transacciones.
+
+  - [Anulaciones](Anulaciones.md)
