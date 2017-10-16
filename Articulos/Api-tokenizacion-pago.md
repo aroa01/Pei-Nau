@@ -4,11 +4,11 @@ La integración mediante nuestra API te da un mayor control sobre el checkout en
 
  Los pasos para realizar la integración son:
 
-1. [Obtener un Token de Acceso](#1-obtener-un-token-de-acceso)
-2. [Crear una Intención de Captura](#2-crear-una-intención-de-captura)
-3. [Mostrar formulario de Captura de tarjeta](#3-mostrar-formulario-de-captura-de-tarjeta)
-4. [Intención de Pago](#4-intención-de-pago)
-5. [Realizar el cobro a la tarjeta](#5-realizar-el-cobro-a-la-tarjeta)
+[1. Obtener un Token de Acceso](#1-obtener-un-token-de-acceso)
+[2. Crear una Intención de Captura](#2-crear-una-intención-de-captura)
+[3. Mostrar formulario de Captura de tarjeta](#3-mostrar-formulario-de-captura-de-tarjeta)
+[4. Intención de Pago](#4-intención-de-pago)
+[5. Realizar el cobro a la tarjeta](#5-realizar-el-cobro-a-la-tarjeta)
 
 #### 1. Obtener un Token de Acceso
 
@@ -40,7 +40,7 @@ Como respuesta obtendrás el **access_token**:
 }
 ```
 
-Con el **access_token** generado, ya puedes comenzar a usar las API's para los pasos 2, 3 y 4 
+Con el **access_token** generado, ya puedes comenzar a usar las API's para los pasos siguientes. 
 
 #### 2. Crear una Intención de Captura
 
@@ -359,7 +359,7 @@ Obtendrás los Links:
 - **self**: desde esta URL puedes consultar la información de la captura.
 - **approval_url**: desde esta URL el cliente debe autorizar el pago.
 - **reverse_method**: para anular la transacción, debes hacer el llamado a este endpoint desde la [API de Anulación](Anulaciones.md).
-- **silent_charge**: llamando a este endpoint desde la **API silent_charge** puedes ejecutar el cobro a la tarjeta de cŕedito del cliente sin pasar por el paso de aprobación.
+- **silent_charge**: llamando a este endpoint desde la **API silent_charge** puedes ejecutar el cobro a la tarjeta de cŕedito del cliente sin pasar por la intención de pago.
 
 Que te permitirán:
 
@@ -369,7 +369,7 @@ Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a con
 
 ##### 5.1 Approval
 
-Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cobro a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3-formulario-de-captura-de-tarjeta).
+Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cobro a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3-mostrar-formulario-de-captura-de-tarjeta).
 
 ![Ejemplo Approval](Portal04.jpg)
 
