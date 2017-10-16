@@ -563,7 +563,15 @@ Esta ventana permite dos opciones al cliente:
 
 ##### 5.2 Silent Charge
 
-Con esta opción, el comercio no necesita aprobación del cliente y puede gatillar el cobro a partir de la URL [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent) generada en el [paso 3](#3. Formulario de Captura de tarjeta).
+Con esta opción, no necesitas la aprobación del cliente para finalizar el cobro.
+
+Necesitas el **access_token** obtenido en la **Autenticación** y el **id (Token de la tarjeta)** generado en la **Intención de captura**, para ejecutar una llamada a la **API de Silent Charge /silent** de la siguiente forma:
+
+```
+ curl -v -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/{Token_de_tarjeta}/silent' \
+ -H "Content-Type: application/json" \
+ -H "Authorization: Bearer access_token"
+```
 
 ## API Checkout
 
