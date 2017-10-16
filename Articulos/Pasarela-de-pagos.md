@@ -7,4 +7,4 @@ Te puedes integrar de las siguientes formas:
 - **API Tokenización y Pago**
 - **SDK/Plugins**
 
-[Regresar al menú inicial](README.md)
+[Regresar al menú inicial](Pei-Nau/README.md)
