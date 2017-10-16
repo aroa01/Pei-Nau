@@ -5,6 +5,7 @@ Esta solución permite recibir pagos de tus clientes en tu sitio de e-commerce.
 Te puedes integrar de las siguientes formas:
 
 - **API Tokenización y Pago**
+- **API Checkout**
 - **SDK/Plugins**
 
-[Regresar al menú inicial](Pei-Nau/README.md)
+Además tienes la posibilidad de ejecutar **Anulaciones** de todas tus transacciones.
