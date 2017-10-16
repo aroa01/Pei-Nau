@@ -18,3 +18,5 @@ Utilizando el **access_token** obtenido en la **Autenticación** y el **id (Toke
 - **Portal de Transbank**
 
   Puedes obtener mayor información en <https://www.transbank.cl/web/landing/2017/anulaciones>
+
+[Volver al menú anterior](Pasarela-de-pagos.md)
