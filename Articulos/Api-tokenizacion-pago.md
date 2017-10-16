@@ -375,12 +375,12 @@ Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para 
 
 Esta ventana permite dos opciones al cliente:
 
-* Aprobar Pago
+* Aprobar Pago y ejecutar el cargo a la tajeta de crédito
 * Cancelar
 
-###### 5.1.1 Aprobar Pago
+###### 5.1.1 Aprobar Pago y ejecutar el cargo a la tajeta de crédito
 
-  Si recibes una respuesta con **"state": "paid"** en la URL indicada como **return_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha aprobado del pago.
+  Si recibes una respuesta con **"state": "paid"** en la URL indicada como **return_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha aprobado del pago y se ejecuta el cargo a la tajeta de crédito.
 
   ```
   {
@@ -554,7 +554,7 @@ Esta ventana permite dos opciones al cliente:
 
 ##### 5.2 Silent Charge
 
-Con esta opción, no necesitas la aprobación del cliente para finalizar el cobro.
+Con esta opción, no necesitas la aprobación del cliente para finalizar el cobro a la tarjeta de crédito.
 
 Necesitas el **access_token** obtenido en la **Autenticación** y el **id (Token de la tarjeta)** generado en la **Intención de captura**, para ejecutar una llamada a la **API de Silent Charge /silent** de la siguiente forma:
 
