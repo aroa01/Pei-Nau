@@ -125,7 +125,7 @@ Detalle de las URL's generadas:
 
 #### 3. Mostrar Formulario de Captura de tarjeta
 
-Con la **capture_url** obtenida en el [paso 2](#2.-Crear-una-intención-de-Captura) puedes desplegar el formulario de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
+Con la **capture_url** obtenida en el [paso 2](#2-crear-una-intención-de-captura) puedes desplegar el formulario de captura de tarjeta. [Puedes hacer clic aquí para ver un ejemplo de capture_url](https://quickpay-connect-capture-card.azurewebsites.net/captures/gateways/credit/card/61bf9053-dc08-15ea-7419-aba75cd3bea4/capture)
 
 ![Ejemplo de ventana Formulario](Portal02.jpg)
 
@@ -133,7 +133,7 @@ El cliente debe ingresar los datos solicitados en el formulario y hacer clic en 
 
 ![Ejemplo datos a ingresar](Portal03.jpg)
 
-La respuesta será enviada a la **return_url** indicada en la petición a la [API de intención de Captura](#2.-Crear-una-Intención-de-Captura).
+La respuesta será enviada a la **return_url** indicada en la petición a la [API de intención de Captura](#2-crear-una-intención-de-captura).
 
 **Ejemplo de respuesta enviada a la return_url:**
 
@@ -369,7 +369,7 @@ Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a con
 
 ##### 5.1 Approval
 
-Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cobro a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3.-Formulario-de-Captura-de-tarjeta).
+Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cobro a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3-formulario-de-captura-de-tarjeta).
 
 ![Ejemplo Approval](Portal04.jpg)
 
