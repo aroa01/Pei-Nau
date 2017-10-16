@@ -133,7 +133,7 @@ El cliente debe ingresar los datos solicitados en el formulario y hacer clic en 
 
 ![Ejemplo datos a ingresar](Portal03.jpg)
 
-La respuesta será enviada a la **return_url** indicada en la petición a la [API de intención de Captura](#2-crear-una-intención-de-captura).
+La respuesta será enviada a la **return_url** indicada en la petición a la [API de intención de Captura (paso 2)](#2-crear-una-intención-de-captura).
 
 **Ejemplo de respuesta enviada a la return_url:**
 
@@ -205,7 +205,7 @@ El **id** generado corresponde al **Token de la tarjeta**.
 
 #### 4. Intención de Pago
 
-Para completar el pago con el **token de la tarjeta** debes ingresar el **id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments**, el **access_token** generado en el paso 1 y hacer el llamado de la siguiente forma:
+Para completar el pago con el **token de la tarjeta** debes ingresar el **id** obtenido previamente de la **return_url** en el campo **capture_token** de la petición a la API de **Intención de Pago /payments**, el **access_token** generado en el [paso 1](1-obtener-un-token-de-acceso) y hacer el llamado de la siguiente forma:
 
 ```
 curl -X POST 'https://quickpay-connect-checkout.azurewebsites.net/payments' \
@@ -356,10 +356,10 @@ Como respuesta obtendrás la siguiente información:
 
 Obtendrás los Links:
 
-- [self](https://quickpay-connect-checkout.azurewebsites.net/payments/0fdcd938-62c7-aab2-5048-c2f172d495ac): desde esta URL puedes consultar la información de la captura.
-- [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay): desde esta URL el cliente debe autorizar el pago.
-- [reverse_method](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/reverse): llamando a esta URL puedes anular la transacción.
-- [silent_charge](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/silent): con esta URL puedes ejecutar el cobro a la tarjeta de cŕedito del cliente sin pasar por el paso de aprobación.
+- **self**: desde esta URL puedes consultar la información de la captura.
+- **approval_url**: desde esta URL el cliente debe autorizar el pago.
+- **reverse_method**: para anular la transacción, debes hacer el llamado a este endpoint desde la [API de Anulación](Anulaciones.md).
+- **silent_charge**: llamando a este endpoint desde la **API silent_charge** puedes ejecutar el cobro a la tarjeta de cŕedito del cliente sin pasar por el paso de aprobación.
 
 Que te permitirán:
 
