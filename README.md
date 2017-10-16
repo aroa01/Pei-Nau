@@ -9,7 +9,7 @@ Además, utilizando Peinau nunca verás la información sensible de la tarjeta y
 Te ofrecemos las siguientes soluciones:
 
 - [Pasarela de pagos](Articulos/Pasarela-de-pagos.md)
-  - [API](Articulos/Api-tokenizacion-pago.md)
+  - [API Tokenización y Pago](Articulos/Api-tokenizacion-pago.md)
   - [Anulaciones](Articulos/Anulaciones.md)
   - [API Checkout](Articulos/Api-checkout.md)
   - [SDK/Plugins](Articulos/Sdk-plugins.md)
