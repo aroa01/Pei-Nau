@@ -572,15 +572,3 @@ Necesitas el **access_token** obtenido en la **Autenticación** y el **id (Token
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer access_token"
 ```
-
-## API Checkout
-
-Puedes ejecutar un pago (Approval o Silent Charge) sin pasar por la captura de tarjeta.
-
-> PROXIMAMENTE
-
-## SDK/Plugins
-
-Tendrás a disposición una serie se SDK's para que puedas personalizar Peinau de acuerdo a tus necesidades.
-
-> PROXIMAMENTE
