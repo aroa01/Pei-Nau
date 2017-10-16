@@ -8,11 +8,11 @@ La integración mediante nuestra API te da un mayor control sobre el checkout en
 - [2. Crear una Intención de Captura](#2-crear-una-intención-de-captura)
 - [3. Mostrar formulario de Captura de tarjeta](#3-mostrar-formulario-de-captura-de-tarjeta)
 - [4. Intención de Pago](#4-intención-de-pago)
-- [5. Realizar el cobro a la tarjeta](#5-cómo-realizar-el-cobro-a-la-tarjeta)
+- [5. Realizar el cargo a la tarjeta](#5-cómo-realizar-el-cargo-a-la-tarjeta)
 
 #### 1. Obtener un Token de Acceso
 
-Al completar el registro de la aplicación en el portal de desarrollo (Alta del Comercio), obtendrás dos llaves con las cuales te podrás autenticar en el sistema, a estas les llamamos **client_id** (identificador) y **client_secret** (Clave Secreta).
+Al completar el registro de la aplicación (Alta del Comercio), obtendrás dos llaves con las cuales te podrás autenticar en el sistema, a estas les llamamos **client_id** (identificador) y **client_secret** (Clave Secreta).
 
 ![Ejemplo de client_id y client_secret](Portal00.jpg)
 
@@ -40,7 +40,7 @@ Como respuesta obtendrás el **access_token**:
 }
 ```
 
-Con el **access_token** generado, ya puedes comenzar a usar las API's para los pasos siguientes. 
+Con el **access_token** generado, ya puedes comenzar a usar nuestras APIs para completar los pasos siguientes. 
 
 #### 2. Crear una Intención de Captura
 
@@ -118,7 +118,7 @@ Como respuesta obtendrás la siguiente información:
 }
 ```
 
-Detalle de las URL's generadas:
+Detalle de las URLs generadas:
 
 + URL 1 (**rel: self**): desde esta URL puedes consultar la información de la intención de captura.
 + URL 2 (**rel: capture_url**): desde esta URL debes acceder al formulario de captura de la tarjeta.
@@ -359,15 +359,15 @@ Obtendrás los Links:
 - **self**: desde esta URL puedes consultar la información de la captura.
 - **approval_url**: desde esta URL el cliente debe autorizar el pago.
 - **reverse_method**: para anular la transacción, debes hacer el llamado a este endpoint desde la [API de Anulación](Anulaciones.md).
-- **silent_charge**: llamando a este endpoint desde la [API silent_charge](#52-silent-charge) puedes ejecutar el cobro a la tarjeta de cŕedito del cliente sin pasar por la intención de pago.
+- **silent_charge**: llamando a este endpoint desde la [API silent_charge](#52-silent-charge) puedes ejecutar el cargo a la tarjeta de cŕedito del cliente sin pasar por la intención de pago.
 
-#### 5. ¿Cómo realizar el cobro a la tarjeta?
+#### 5. ¿Cómo realizar el cargo a la tarjeta?
 
-Te ofrecemos dos opciones para realizar el cobro a la tarjeta del cliente, a continuación podrás ver el detalle de cada una: 
+Te ofrecemos dos opciones para realizar el cargo a la tarjeta del cliente, a continuación podrás ver el detalle de cada una: 
 
 ##### 5.1 Approval
 
-Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cobro a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3-mostrar-formulario-de-captura-de-tarjeta).
+Si quieres utilizar esta opción, necesitas que el cliente apruebe el pago para ejecutar el cargo a la tarjeta de crédito. Para ello debes desplegar la ventana de aprobación del pago a partir de la [approval_url](https://quickpay-connect-checkout.azurewebsites.net/payments/gateways/quickpay/token/0fdcd938-62c7-aab2-5048-c2f172d495ac/pay) obtenida en el [paso 3](#3-mostrar-formulario-de-captura-de-tarjeta).
 
 ![Ejemplo Approval](Portal04.jpg)
 
@@ -378,7 +378,7 @@ Esta ventana permite dos opciones al cliente:
 
 ###### 5.1.1 Aprobar Pago y ejecutar el cargo a la tajeta de crédito
 
-  Si recibes una respuesta con **"state": "paid"** en la URL indicada como **return_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha aprobado del pago y se ejecuta el cargo a la tajeta de crédito.
+  Si recibes una respuesta con **"state": "paid"** en la URL indicada como **return_url** o consultando desde la **URL self**, entonces el cliente ha aprobado del pago y se ejecuta el cargo a la tajeta de crédito.
 
   ```
   {
@@ -476,7 +476,7 @@ Esta ventana permite dos opciones al cliente:
 
 ###### 5.1.2 Cancelar
 
-  Si recibes una respuesta con **"state": "canceled"** en la URL indicada como **cancel_url** o consultando desde la URL [self](https://quickpay-connect-checkout.azurewebsites.net/payments/9ece98a3-9c64-6f0d-ee12-39e68745017d), entonces el cliente ha cancelado el pago.
+  Si recibes una respuesta con **"state": "canceled"** en la URL indicada como **cancel_url** o consultando desde la **URL self**, entonces el cliente ha cancelado el pago.
 
 ```
 {
@@ -552,7 +552,7 @@ Esta ventana permite dos opciones al cliente:
 
 ##### 5.2 Silent Charge
 
-Con esta opción, no necesitas la aprobación del cliente para finalizar el cobro a la tarjeta de crédito.
+Con esta opción, no es requerida la aprobación del cliente para finalizar el cargo a la tarjeta de crédito.
 
 Necesitas el **access_token** obtenido en la **Autenticación** y el **id (Token de la tarjeta)** generado en la **Intención de captura**, para ejecutar una llamada a la **API de Silent Charge /silent** de la siguiente forma:
 
