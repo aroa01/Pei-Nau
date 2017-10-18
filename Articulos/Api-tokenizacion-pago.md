@@ -133,7 +133,13 @@ El cliente debe ingresar los datos solicitados en el formulario y hacer clic en 
 
 ![Ejemplo datos a ingresar](Portal03.jpg)
 
-La respuesta será enviada a la **return_url** indicada en la petición a la [API de intención de Captura (paso 2)](#2-crear-una-intención-de-captura).
+La respuesta será enviada a la página de confirmacion indicada en la variable **"return_url"** de la petición a la [API de intención de Captura (paso 2)](#2-crear-una-intención-de-captura) o puedes consultar dicha respuesta llamando a la **API Revisión de Captura** de la siguiente forma:
+
+```
+ curl -X GET 'https://quickpay-connect-capture-card.azurewebsites.net/captures/{{id}}'
+```
+
+> Debes reemplazar el **id** por el obtenido en la respuesta de la **API de captura /captures** [paso 2](#2-crear-una-intención-de-captura).
 
 **Ejemplo de respuesta enviada a la return_url:**
 
