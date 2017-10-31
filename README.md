@@ -1,4 +1,4 @@
-## Introducción
+## Introducción a Peinau
 
 Bienvenido al portal de desarrolladores de Peinau
 
@@ -8,13 +8,8 @@ Además, utilizando Peinau nunca verás la información sensible de la tarjeta y
 
 Te ofrecemos las siguientes soluciones:
 
-- [Pasarela de pagos](Articulos/Pasarela-de-pagos.md)
-  - [API Tokenización y Pago](Articulos/Api-tokenizacion-pago.md)
-  - [API Checkout](Articulos/Api-checkout.md)
-  - [SDK/Plugins](Articulos/Sdk-plugins.md)
-  - [Anulaciones](Articulos/Anulaciones.md)
+- [Pasarela de pagos](articles/pasarela-de-pagos/introduction.md)
 
-- [Motor de fraude](Articulos/Motor-de-fraude.md)
-- [Pago Recurrente](Articulos/Pago-recurrente.md)
+- [Motor de fraude](articles/motor-de-fraude/introduction.md)
 
-
+¿Quieres contribuir con el contenido de PEINAU? [Más Info Aquí](articles/contribuciones/introduccion.md)
