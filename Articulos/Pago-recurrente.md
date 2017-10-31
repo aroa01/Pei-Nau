@@ -1,3 +1,0 @@
-# Pago Recurrente (Suscripción)
-
-> PROXIMAMENTE
