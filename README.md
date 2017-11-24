@@ -6,9 +6,20 @@ Si quieres integrar un botón de pagos en tu sitio web de forma fácil, rápida 
 
 Además, utilizando Peinau nunca verás la información sensible de la tarjeta y con ello le daras mas seguridad a tus clientes.
 
-Te ofrecemos las siguientes soluciones:
+Te ofrecemos diversas opciones de integración para que puedas adaptar nuestro producto a las necesidades de tu negocio.
 
-- [Pasarela de pagos](articles/pasarela-de-pagos/introduction.md)
+## API Checkout
+  - [Captura de Tarjeta + Checkout](api-tokenizacion-pago/introduction.md)
+  - [Credit Express Checkout](api-checkout/introduction.md)
+  - [Debit Checkout con Webpay plus](transbank-webpay/introduction.md)
+  
+## SDKs
+  - [SDK Javascript](https://github.com/Peinau/peinau-javascript/blob/master/README.md)
+  
+## Plugins
+  - [Prestashop](../../../../../peinau-plugin-prestashop/blob/master/README.md)
+  - [VTEX](plugins/vtex/introduction.md)
+  - [WooCommerce](plugins/woocommerce/introduction.md)
 
 - [Motor de fraude](articles/motor-de-fraude/introduction.md)
 
