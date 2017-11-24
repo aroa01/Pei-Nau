@@ -9,7 +9,7 @@ Además, utilizando Peinau nunca verás la información sensible de la tarjeta y
 Te ofrecemos diversas opciones de integración para que puedas adaptar nuestro producto a las necesidades de tu negocio.
 
 ## API Checkout
-  - [Captura de Tarjeta + Checkout](api-tokenizacion-pago/introduction.md)
+  - [Captura de Tarjeta + Checkout](pasarela-de-pagos/api-tokenizacion-pago/introduction.md)
   - [Credit Express Checkout](api-checkout/introduction.md)
   - [Debit Checkout con Webpay plus](transbank-webpay/introduction.md)
   
